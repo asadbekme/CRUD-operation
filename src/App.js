@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import AddUser from './components/AddUser';
+import Main from './components/Main';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container mx-auto px-2 max-w-5xl pt-7 md:pt-10">
+      <h1 className="text-center font-bold text-2xl text-gray-700">CRUD operation with Redux Toolkit</h1>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/add-user" element={<AddUser />} />
+      </Routes>
     </div>
   );
 }
