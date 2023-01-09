@@ -1,7 +1,8 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import AddUser from './components/AddUser';
 import Main from './components/Main';
+import AddUser from './components/AddUser';
+import EditUser from './components/EditUser';
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/add-user" element={<AddUser />} />
+        <Route path="/edit-user/:id" element={<EditUser />} />
       </Routes>
     </div>
   );

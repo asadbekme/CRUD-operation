@@ -1,14 +1,16 @@
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Button from "./Button";
 import UserList from "./UserList";
 
 const Main = () => {
   const { users } = useSelector((store) => store.user);
-  // console.log(users);
 
   return (
     <>
-      <Button>Add User</Button>
+      <Link to={"/add-user"}>
+        <Button>Add User</Button>
+      </Link>
 
       <div className="grid gap-5 md:grid-cols-2">
         {users.length ? 
