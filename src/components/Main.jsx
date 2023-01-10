@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import Button from "./Button";
-import UserList from "./UserList";
+import { Button, UserList }  from "./index";
 
 const Main = () => {
   const { users } = useSelector((store) => store.user);
@@ -16,7 +15,9 @@ const Main = () => {
         {users.length ? 
           <UserList /> 
             : 
-          <p className="text-center col-span-2 font-semibold text-gray-700">No User</p>
+          <p className="text-center col-span-2 font-semibold text-gray-700">
+            No User
+          </p>
         }
       </div>
     </>

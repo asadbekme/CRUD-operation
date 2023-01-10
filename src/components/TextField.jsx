@@ -5,8 +5,8 @@ const TextField = ({ label, inputProps, value, onChange }) => {
       <input 
         className="bg-gray-200 py-2 px-3 border-2 ouline-none"
         {...inputProps}
-        onChange={onChange}
         value={value}
+        onChange={onChange}
       />
     </div>
   );
