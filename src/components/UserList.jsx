@@ -4,7 +4,7 @@ import { deleteUser } from "../slice/userSlice";
 
 const UserList = () => {
   const dispatch = useDispatch();
-  const { users } = useSelector((store) => store.user);
+  const users = useSelector((store) => store.user);
 
   const handleRemoveUser = (id) => {
     dispatch(deleteUser({ id: id }));

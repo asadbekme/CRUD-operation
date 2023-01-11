@@ -8,19 +8,19 @@ const EditUser = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const params = useParams();
-  const { users } = useSelector((store) => store.user);
+  const users = useSelector((store) => store.user);
   // console.log(typeof params.id);
   const existingUser = users.filter((user) => user.id === Number(params.id));
   const { username, email } = existingUser[0];
   const [values, setValues] = useState({ username: username, email: email });
   
   const handleEditUser = () => {
-    setValues({ username: '', email: '' });
     dispatch(editUser({
       id: params.id,
       username: values.username,
       email: values.email
     }));
+    setValues({ username: '', email: '' });
     navigate("/");
   }
   

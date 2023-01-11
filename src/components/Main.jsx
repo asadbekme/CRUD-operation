@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { Button, UserList }  from "./index";
 
 const Main = () => {
-  const { users } = useSelector((store) => store.user);
+  const users = useSelector((store) => store.user);
 
   return (
     <>

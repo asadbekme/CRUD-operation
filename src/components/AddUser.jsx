@@ -12,12 +12,12 @@ const AddUser = () => {
 
   const handleAddUser = () => {
     // console.log(values);
-    setValues({ username: "", email: "" });
     dispatch(addUser({
       id: uuidv4(),
       username: values.username,
       email: values.email
     }));
+    setValues({ username: "", email: "" });
     navigate("/");
   }
 
