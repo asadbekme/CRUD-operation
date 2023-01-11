@@ -9,8 +9,8 @@ const EditUser = () => {
   const dispatch = useDispatch();
   const params = useParams();
   const users = useSelector((store) => store.user);
-  // console.log(typeof params.id);
-  const existingUser = users.filter((user) => user.id === Number(params.id));
+  // console.log(params.id, typeof params.id);
+  const existingUser = users.filter((user) => user.id === params.id);
   const { username, email } = existingUser[0];
   const [values, setValues] = useState({ username: username, email: email });
   

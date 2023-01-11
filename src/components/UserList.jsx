@@ -7,7 +7,7 @@ const UserList = () => {
   const users = useSelector((store) => store.user);
 
   const handleRemoveUser = (id) => {
-    dispatch(deleteUser({ id: id }));
+    dispatch(deleteUser({ id }));
   }
     
   return (

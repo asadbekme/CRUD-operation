@@ -12,6 +12,7 @@ const userSlice = createSlice({
     },
     editUser: (state, action) => {
       const { id, username, email } = action.payload;
+      // console.log(action.payload);
       const existingUser = state.find((user) => user.id === id);
       if (existingUser) {
         existingUser.username = username;
@@ -21,7 +22,6 @@ const userSlice = createSlice({
     deleteUser: (state, action) => {
       const { id } = action.payload;
       const existingUser = state.find((user) => user.id === id);
-      console.log(existingUser);
       if (existingUser) {
         return state.filter((user) => user.id !== id);
       }
